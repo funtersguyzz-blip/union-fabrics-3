@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Union Fabrics (Pvt.) Ltd. — Bedding, Fabrics, Denim &amp; Eastern Wear | Est. 1992</title>
+<meta name="description" content="Vertically integrated textile manufacturer in Karachi, Pakistan since 1992. Home &amp; utility bedding, fabrics, sustainable denim and Eastern wear, supplied to leading brands worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;1,9..144,420;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap');
+
+:root{
+  --cream:#F3ECDC;
+  --cream-deep:#E9DCC1;
+  --paper:#FAF5E9;
+  --ink:#221B12;
+  --ink-soft:#5B5142;
+  --rust:#B9692C;
+  --rust-deep:#96521F;
+  --rust-pale:#EFC9A2;
+  --black:#17130D;
+  --black-soft:#241E15;
+  --line: rgba(34,27,18,0.14);
+  --line-dark: rgba(250,245,233,0.16);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Public Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{
+  font-family:'Fraunces', serif;
+  font-weight:560;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+}
+em, .accent{
+  font-style:italic;
+  color:var(--rust);
+  font-weight:420;
+}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+.wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+ul{list-style:none;}
+
+/* header */
+header{
+  position:sticky; top:0; z-index:80;
+  background:rgba(243,236,220,0.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav-row{
+  display:flex; align-items:center; justify-content:space-between;
+  height:78px; gap:24px;
+}
+.brand{display:flex; align-items:center; gap:12px;}
+.brand .mark{width:30px; height:30px; flex:none;}
+.brand-text{display:flex; flex-direction:column; line-height:1.1;}
+.brand-text .name{font-family:'Fraunces', serif; font-weight:600; font-size:1rem; letter-spacing:0.01em; text-transform:uppercase;}
+.brand-text .est{font-family:'Fraunces', serif; font-style:italic; font-size:0.78rem; color:var(--rust);}
+.primary-nav{display:flex; align-items:center; gap:30px; flex:1; justify-content:center;}
+.primary-nav a{
+  font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--ink-soft); padding:6px 2px; border-bottom:2px solid transparent;
+}
+.primary-nav a:hover, .primary-nav a.is-active{color:var(--ink); border-bottom-color:var(--rust);}
+.btn{
+  display:inline-block; padding:13px 24px; font-size:0.78rem; font-weight:700;
+  letter-spacing:0.05em; text-transform:uppercase; border-radius:2px; border:1px solid transparent;
+  transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.btn-rust{background:var(--rust); color:var(--paper);}
+.btn-rust:hover{background:var(--rust-deep);}
+.btn-outline{border-color:var(--ink); color:var(--ink);}
+.btn-outline:hover{background:var(--ink); color:var(--paper);}
+.btn-outline-light{border-color:rgba(250,245,233,0.6); color:var(--paper);}
+.btn-outline-light:hover{background:var(--paper); color:var(--ink);}
+.nav-cta{flex:none;}
+
+/* subnav (products tabs) */
+.subnav{background:var(--cream); border-bottom:1px solid var(--line);}
+.subnav .wrap{display:flex; gap:38px; height:54px; align-items:center;}
+.subnav a{font-size:0.76rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft); padding-bottom:4px; border-bottom:2px solid transparent;}
+.subnav a.is-active, .subnav a:hover{color:var(--ink); border-bottom-color:var(--rust);}
+
+/* breadcrumb */
+.crumb{padding:22px 0 0; font-size:0.82rem; color:var(--ink-soft);}
+.crumb a:hover{color:var(--rust);}
+
+/* hero band (rust) */
+.rust-band{
+  position:relative; overflow:hidden;
+  background:var(--rust);
+  background-image:
+    repeating-linear-gradient(115deg, rgba(255,255,255,0.045) 0px, rgba(255,255,255,0.045) 2px, transparent 2px, transparent 20px),
+    linear-gradient(160deg, var(--rust) 0%, var(--rust-deep) 100%);
+  color:var(--paper);
+}
+.rust-band .wrap{padding:88px 0 104px; text-align:center;}
+.rust-band .eyebrow{font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(250,245,233,0.85); margin-bottom:18px;}
+.rust-band h1, .rust-band h2{
+  font-size:clamp(2.3rem, 5vw, 3.6rem); line-height:1.06; max-width:16ch; margin:0 auto 22px;
+}
+.rust-band p{max-width:56ch; margin:0 auto; color:rgba(250,245,233,0.88); font-size:1.05rem;}
+.rust-band .cta-row{display:flex; justify-content:center; gap:16px; margin-top:36px; flex-wrap:wrap;}
+
+/* page hero (plain, for interior pages) */
+.page-hero{padding:56px 0 20px;}
+.page-hero .kicker{font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--rust); margin-bottom:14px;}
+.page-hero h1{font-size:clamp(2.2rem, 4.4vw, 3.4rem); line-height:1.06; max-width:18ch;}
+.page-hero .lede{max-width:58ch; margin-top:20px; font-size:1.08rem; color:var(--ink-soft);}
+
+/* strip */
+.strip{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--cream-deep);}
+.strip .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px 30px; padding:16px 32px;}
+.strip span{font-size:0.8rem; color:var(--ink-soft); font-weight:500;}
+.strip strong{color:var(--ink); font-weight:700;}
+
+/* sections */
+section{padding:96px 0;}
+.section-head{
+  display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px;
+  margin-bottom:52px; align-items:end; border-bottom:1px solid var(--line); padding-bottom:32px;
+}
+.section-head h2{font-size:clamp(1.85rem, 3vw, 2.5rem); line-height:1.1;}
+.section-head p{color:var(--ink-soft); max-width:52ch;}
+.section-head.center{grid-template-columns:1fr; text-align:center;}
+.section-head.center p{margin:0 auto;}
+
+/* card grids */
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line); border:1px solid var(--line);}
+.grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:var(--line); border:1px solid var(--line);}
+.grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--line); border:1px solid var(--line);}
+.cell{background:var(--cream); padding:34px 30px;}
+.cell .num{font-family:'Fraunces', serif; font-size:0.85rem; color:var(--rust); font-weight:600; margin-bottom:14px;}
+.cell h3{font-size:1.12rem; margin-bottom:10px;}
+.cell p{color:var(--ink-soft); font-size:0.95rem;}
+
+/* division / product cards */
+.division-card{
+  border:1px solid var(--line); background:var(--paper); padding:38px 34px;
+  display:flex; flex-direction:column; gap:14px; height:100%;
+}
+.division-card .tag{font-size:0.72rem; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--rust);}
+.division-card h3{font-size:1.4rem;}
+.division-card p{color:var(--ink-soft); font-size:0.95rem;}
+.division-card ul{margin-top:6px; display:flex; flex-direction:column; gap:6px;}
+.division-card li{font-size:0.9rem; color:var(--ink-soft); padding-left:16px; position:relative;}
+.division-card li::before{content:"—"; position:absolute; left:0; color:var(--rust);}
+.division-card .card-cta{margin-top:auto; padding-top:14px; font-size:0.82rem; font-weight:700; color:var(--rust); text-transform:uppercase; letter-spacing:0.05em;}
+
+/* dark section */
+.dark-section{background:var(--black); color:var(--paper);}
+.dark-section .section-head{border-color:var(--line-dark);}
+.dark-section .section-head h2, .dark-section .section-head p{color:var(--paper);}
+.dark-section .section-head p{color:#C8BFAC;}
+.dark-section .grid-4, .dark-section .grid-3, .dark-section .grid-2{background:var(--line-dark); border-color:var(--line-dark);}
+.dark-section .cell{background:var(--black);}
+.dark-section .cell p{color:#B9AF9A;}
+.dark-section .cell h3{color:var(--paper);}
+
+/* stat blocks */
+.stat-row{display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:var(--line-dark); border:1px solid var(--line-dark);}
+.stat-cell{background:var(--black); padding:32px 26px;}
+.stat-cell b{font-family:'Fraunces', serif; font-size:2.3rem; display:block; font-weight:600; color:var(--rust-pale);}
+.stat-cell span{font-size:0.85rem; color:#B9AF9A;}
+
+/* process track */
+.process-track{display:grid; grid-template-columns:repeat(4,1fr); gap:36px;}
+.process-step{display:flex; flex-direction:column; gap:10px;}
+.process-step .num{font-family:'Fraunces', serif; color:var(--rust); font-size:0.95rem; font-weight:600;}
+.process-step h3{font-size:1.1rem;}
+.process-step p{color:var(--ink-soft); font-size:0.92rem;}
+
+/* timeline */
+.timeline{display:flex; flex-direction:column; border-top:1px solid var(--line);}
+.timeline-row{display:grid; grid-template-columns:140px 1fr; gap:32px; padding:28px 0; border-bottom:1px solid var(--line);}
+.timeline-row .year{font-family:'Fraunces', serif; font-size:1.6rem; color:var(--rust); font-weight:600;}
+.timeline-row h3{font-size:1.08rem; margin-bottom:6px;}
+.timeline-row p{color:var(--ink-soft); font-size:0.95rem; max-width:60ch;}
+
+/* certification chips */
+.cert-strip{display:flex; flex-wrap:wrap; gap:14px;}
+.cert-chip{border:1px solid var(--line); background:var(--paper); padding:14px 20px; font-size:0.88rem; font-weight:600; color:var(--ink-soft);}
+
+/* quote block */
+.quote-block{display:grid; grid-template-columns:0.4fr 0.6fr; gap:52px; align-items:center;}
+.quote-photo{aspect-ratio:4/5; background:var(--cream-deep); border:1px solid var(--line); display:flex; align-items:flex-end; padding:20px;}
+.quote-photo .cap{font-size:0.8rem; color:var(--ink-soft);}
+.quote-text{font-family:'Fraunces', serif; font-style:italic; font-size:1.5rem; line-height:1.4; color:var(--ink);}
+.quote-attr{margin-top:20px; font-size:0.86rem; color:var(--ink-soft); font-style:normal; font-family:'Public Sans', sans-serif;}
+.quote-attr strong{color:var(--ink); font-weight:700;}
+
+/* two-col value / vision-mission */
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+.value-card{border:1px solid var(--line); background:var(--paper); padding:32px;}
+.value-card .tag{font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--rust); margin-bottom:12px;}
+.value-card p{color:var(--ink-soft);}
+
+/* facility list */
+.facility-list{display:flex; flex-direction:column; border-top:1px solid var(--line-dark);}
+.facility-row{display:grid; grid-template-columns:52px 1fr 220px; gap:22px; align-items:center; padding:26px 0; border-bottom:1px solid var(--line-dark);}
+.facility-row .fnum{font-family:'Fraunces', serif; color:var(--rust-pale); font-size:1.1rem;}
+.facility-row h4{color:var(--paper); font-size:1.08rem; margin-bottom:4px;}
+.facility-row p{color:#B9AF9A; font-size:0.88rem;}
+.facility-row .fout{color:#DCC9AC; font-size:0.85rem; text-align:right;}
+
+/* CTA band */
+.cta-band{background:var(--ink); color:var(--paper); padding:80px 0;}
+.cta-band .wrap{text-align:center;}
+.cta-band h2{color:var(--paper); font-size:clamp(1.9rem,3.4vw,2.8rem); max-width:20ch; margin:0 auto 18px;}
+.cta-band p{color:#CFC6B4; max-width:52ch; margin:0 auto 32px;}
+.cta-band .cta-row{display:flex; justify-content:center; gap:16px; flex-wrap:wrap;}
+
+/* contact */
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
+.contact-block h3{font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--rust); font-weight:700; margin-bottom:12px;}
+.contact-block p, .contact-block a{font-size:1.02rem; margin-bottom:4px; display:block;}
+.contact-block a:hover{color:var(--rust);}
+.contact-block .divider{height:1px; background:var(--line); margin:26px 0;}
+.contact-form{display:flex; flex-direction:column; gap:14px; background:var(--paper); border:1px solid var(--line); padding:34px;}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+.field label{display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;}
+.field input, .field select, .field textarea{
+  width:100%; border:1px solid var(--ink); background:var(--cream); padding:13px 14px;
+  font-family:'Public Sans', sans-serif; font-size:0.94rem; color:var(--ink);
+}
+.field textarea{min-height:110px; resize:vertical;}
+.contact-form button{align-self:flex-start; border:none; cursor:pointer; margin-top:6px;}
+.form-note{font-size:0.8rem; color:var(--ink-soft); margin-top:4px;}
+.form-note a{color:var(--rust); text-decoration:underline;}
+
+/* why-work-with */
+.why-list{display:flex; flex-direction:column; gap:26px; margin-top:28px;}
+.why-item{display:flex; gap:18px; align-items:flex-start;}
+.why-icon{width:48px; height:48px; flex:none; border-radius:50%; background:var(--cream-deep); border:1px solid var(--line); display:flex; align-items:center; justify-content:center;}
+.why-item h4{font-size:1.05rem; margin-bottom:6px;}
+.why-item p{color:var(--ink-soft); font-size:0.92rem;}
+
+/* footer */
+footer{background:var(--black); color:#CFC6B4; padding:74px 0 26px;}
+.footer-grid{display:grid; grid-template-columns:1.3fr 0.9fr 0.9fr 1.1fr; gap:40px; padding-bottom:56px;}
+.footer-brand .brand{margin-bottom:18px;}
+.footer-brand .brand-text .name{color:var(--paper);}
+.footer-brand p{font-size:0.92rem; color:#B9AF9A; max-width:32ch; margin-bottom:22px;}
+.footer-social{display:flex; gap:10px;}
+.footer-social a{width:34px; height:34px; border:1px solid rgba(250,245,233,0.28); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#CFC6B4;}
+.footer-social a:hover{border-color:var(--rust); color:var(--rust-pale);}
+.footer-col h5{font-size:0.76rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#8F866F; margin-bottom:18px;}
+.footer-col ul{display:flex; flex-direction:column; gap:11px;}
+.footer-col a{font-size:0.92rem; color:#CFC6B4;}
+.footer-col a:hover{color:var(--rust-pale);}
+.footer-col p{font-size:0.92rem; color:#CFC6B4; margin-bottom:4px;}
+.foot-bottom{border-top:1px solid rgba(250,245,233,0.14); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;}
+.foot-bottom .legal{display:flex; gap:22px; flex-wrap:wrap; font-size:0.82rem; color:#B9AF9A;}
+.foot-bottom .legal a:hover{color:var(--rust-pale);}
+.foot-bottom .tagline{font-family:'Fraunces', serif; font-style:italic; color:var(--rust-pale); font-size:0.92rem;}
+.copyright{font-size:0.8rem; color:#8F866F;}
+
+/* responsive */
+@media (max-width:980px){
+  .primary-nav{display:none;}
+  .section-head{grid-template-columns:1fr; gap:16px;}
+  .grid-3, .grid-4, .grid-2{grid-template-columns:1fr;}
+  .stat-row{grid-template-columns:1fr 1fr;}
+  .process-track{grid-template-columns:1fr 1fr;}
+  .two-col{grid-template-columns:1fr;}
+  .quote-block{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr; gap:32px;}
+  .facility-row{grid-template-columns:40px 1fr; }
+  .facility-row .fout{display:none;}
+}
+@media (max-width:560px){
+  .footer-grid{grid-template-columns:1fr;}
+}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+
+.page-section{scroll-margin-top:78px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav-row">
+    <a href="#home" class="brand">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 20C20 20 12 12 6 12C2.5 12 0 14.5 0 18C0 21.5 2.5 24 6 24C12 24 20 20 20 20Z" fill="currentColor" opacity="0.9" transform="translate(3,0)"/>
+<path d="M20 20C20 20 28 28 34 28C37.5 28 40 25.5 40 22C40 18.5 37.5 16 34 16C28 16 20 20 20 20Z" fill="currentColor" opacity="0.9" transform="translate(-3,0)"/>
+<path d="M20 20C20 20 12 28 6 28C2.5 28 0 25.5 0 22C0 18.5 2.5 16 6 16C12 16 20 20 20 20Z" fill="currentColor" opacity="0.6" transform="translate(3,0)"/>
+<path d="M20 20C20 20 28 12 34 12C37.5 12 40 14.5 40 18C40 21.5 37.5 24 34 24C28 24 20 20 20 20Z" fill="currentColor" opacity="0.6" transform="translate(-3,0)"/>
+</svg>
+      <span class="brand-text">
+        <span class="name">Union Fabrics</span>
+        <span class="est">Est. 1992</span>
+      </span>
+    </a>
+    <nav class="primary-nav">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#manufacturing">Manufacturing</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#about">About</a>
+    </nav>
+    <a href="#contact" class="btn btn-rust nav-cta">Contact Us</a>
+  </div>
+</header>
+<main>
+<div id="home" class="page-section">
+
+
+<section class="rust-band" style="padding:0;">
+  <div class="wrap">
+    <div class="eyebrow">Karachi, Pakistan &middot; Est. 1992</div>
+    <h1>One mill. Four divisions. Cotton woven into product for the world's leading brands.</h1>
+    <p>Union Fabrics takes raw yarn through weaving, dyeing, printing, lamination and stitching under a single roof &mdash; supplying bedding, fabrics, denim and Eastern wear at export scale.</p>
+    <div class="cta-row">
+      <a href="#products" class="btn btn-outline-light">See our products</a>
+      <a href="#contact" class="btn" style="background:var(--paper); color:var(--rust-deep);">Request samples</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span><strong>Since 1992</strong> family-owned manufacturing</span>
+    <span><strong>3,000+</strong> employees across seven facilities</span>
+    <span><strong>120M</strong> metres woven per year</span>
+    <span><strong>GOTS-certified</strong> organic cotton</span>
+  </div>
+</div>
+
+<section id="divisions">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Four divisions, one accountable supplier</h2>
+      <p>From sheeting to sateen, laminated performance cloth to sustainable denim and Eastern wear, every division runs through the same vertically integrated pipeline &mdash; so buyers deal with one partner from yarn to finished order.</p>
+    </div>
+    <div class="grid-4">
+      <div class="cell">
+        <div class="num">01</div>
+        <h3>Home &amp; Utility Bedding</h3>
+        <p>Sheeting, percale, sateen and dobby weaves for sheets, shams and utility cloth.</p>
+      </div>
+      <div class="cell">
+        <div class="num">02</div>
+        <h3>Fabrics</h3>
+        <p>Greige, dyed, printed and laminated fabrics for mattress, upholstery and technical uses.</p>
+      </div>
+      <div class="cell">
+        <div class="num">03</div>
+        <h3>Denim Division</h3>
+        <p>Indigo-dyed denim built on sustainable water and dye-recovery processes.</p>
+      </div>
+      <div class="cell">
+        <div class="num">04</div>
+        <h3>Eastern Wear for Women</h3>
+        <p>Printed and finished lawn, cambric and voile for regional and export apparel markets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section" id="manufacturing-preview">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Loom to label, under one roof</h2>
+      <p>Seven integrated facilities in Karachi cover weaving, knitting, wet processing, digital and rotary printing, indigo dyeing, lamination and stitching &mdash; every stage handed off internally rather than outsourced.</p>
+    </div>
+    <div class="stat-row">
+      <div class="stat-cell"><b>120M</b><span>Metres woven per year</span></div>
+      <div class="stat-cell"><b>50K</b><span>Metres/day digital printing</span></div>
+      <div class="stat-cell"><b>250K</b><span>Metres/month lamination</span></div>
+      <div class="stat-cell"><b>7</b><span>Integrated Karachi facilities</span></div>
+    </div>
+    <div style="margin-top:36px;">
+      <a href="#manufacturing" class="btn btn-outline-light">Explore manufacturing</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Why brands work with Union Fabrics</h2>
+      <p>Three decades of staying close to one craft &mdash; home-textile cotton &mdash; rather than spreading thin across unrelated categories.</p>
+    </div>
+    <div class="grid-3">
+      <div class="cell">
+        <div class="num">01</div>
+        <h3>Vertical integration</h3>
+        <p>Weaving, dyeing, printing and finishing run under one operation, cutting handoffs and lead times between stages.</p>
+      </div>
+      <div class="cell">
+        <div class="num">02</div>
+        <h3>Organic-first supply</h3>
+        <p>A dedicated GOTS-certified organic cotton line serves brands that need traceability from field to finished roll.</p>
+      </div>
+      <div class="cell">
+        <div class="num">03</div>
+        <h3>Design-led output</h3>
+        <p>An in-house creative team develops prints and colourways alongside clients, not just after specs are handed down.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to request samples?</h2>
+    <p>Complimentary first samples, DHL courier at cost, and a typical 5&ndash;7 day lab-dip turnaround. Our sales team responds to every enquiry within one business day.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn btn-rust">Request samples</a>
+      <a href="#manufacturing" class="btn btn-outline-light">See manufacturing</a>
+    </div>
+  </div>
+</section>
+
+
+</div><div id="products" class="page-section">
+
+
+<div class="page-hero wrap">
+  <div class="kicker">Bedding &middot; Fabrics &middot; Denim &middot; Eastern Wear</div>
+  <h1>Four product divisions, built on one supply chain.</h1>
+  <p class="lede">Every division below draws on the same greige weaving, dyeing, printing and finishing lines &mdash; so construction, colour and quality stay consistent whichever category you order from.</p>
+</div>
+
+<section id="bedding">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Home &amp; Utility Bedding</h2>
+      <p>Sheeting, percale, sateen and dobby constructions for flat sheets, fitted sheets, shams, duvet covers and utility cloth, in thread counts from T-120 through T-1000.</p>
+    </div>
+    <div class="grid-3">
+      <div class="division-card" style="border:none; background:transparent; padding:0;">
+        <div class="tag">Percale</div>
+        <h3>Crisp, cool-hand weave</h3>
+        <p>A tight plain weave for sheets and shams that stays crisp wash after wash.</p>
+      </div>
+      <div class="division-card" style="border:none; background:transparent; padding:0;">
+        <div class="tag">Sateen</div>
+        <h3>Lustrous, soft-hand weave</h3>
+        <p>A four-over, one-under weave with a soft drape and subtle sheen, up to T-1000.</p>
+      </div>
+      <div class="division-card" style="border:none; background:transparent; padding:0;">
+        <div class="tag">Dobby &amp; Sheeting</div>
+        <h3>Structured and everyday cloth</h3>
+        <p>Woven-in textures for structured lines, plus mid-count sheeting for everyday bedding programs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fabrics" class="dark-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Fabrics</h2>
+      <p>Greige, dyed, printed and laminated fabrics supplying mattress, upholstery, healthcare and technical end-uses, digitally or rotary printed to order.</p>
+    </div>
+    <div class="grid-3">
+      <div class="cell">
+        <h3>Digital printing</h3>
+        <p>Short-run, high-definition colourways for custom and fast-turn orders.</p>
+      </div>
+      <div class="cell">
+        <h3>Rotary printing</h3>
+        <p>High-volume repeat patterns for standing collections and program business.</p>
+      </div>
+      <div class="cell">
+        <h3>Lamination</h3>
+        <p>Bonded and laminated constructions for mattress ticking and technical fabric applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="denim">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Denim Division</h2>
+      <p>Indigo-dyed denim developed with water- and dye-recovery processes, built for brands prioritising a lower-impact denim supply chain without trading off hand-feel or colour depth.</p>
+    </div>
+    <div class="grid-3">
+      <div class="cell">
+        <div class="num">01</div>
+        <h3>Indigo dyeing</h3>
+        <p>Rope and slasher dyeing lines tuned for consistent shade across bulk orders.</p>
+      </div>
+      <div class="cell">
+        <div class="num">02</div>
+        <h3>Sustainable processing</h3>
+        <p>Water-recovery and reduced-chemical finishing built into the denim line.</p>
+      </div>
+      <div class="cell">
+        <div class="num">03</div>
+        <h3>Weight &amp; stretch range</h3>
+        <p>Rigid through stretch constructions across a working weight range for apparel programs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="eastern" class="dark-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Eastern Wear for Women</h2>
+      <p>Printed and finished lawn, cambric and voile fabrics for regional and export women's-wear markets, developed alongside clients' design teams.</p>
+    </div>
+    <div class="grid-3">
+      <div class="cell">
+        <h3>Lawn &amp; cambric</h3>
+        <p>Lightweight, fine-count fabrics finished for print clarity and drape.</p>
+      </div>
+      <div class="cell">
+        <h3>Voile</h3>
+        <p>Sheer, soft-hand fabric for layered and seasonal collections.</p>
+      </div>
+      <div class="cell">
+        <h3>In-house design</h3>
+        <p>Prints and colourways developed with clients rather than only from handed-down specs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rust-band" style="padding:0;">
+  <div class="wrap">
+    <h2>Ready to Request<br><span style="font-style:italic;">Samples?</span></h2>
+    <p>Complimentary first samples, DHL courier at cost, and typical 5&ndash;7 day lab-dip turnaround. Our sales team responds to every enquiry within one business day.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn" style="background:var(--paper); color:var(--rust-deep);">Request Samples</a>
+      <a href="#manufacturing" class="btn btn-outline-light">See Manufacturing</a>
+    </div>
+  </div>
+</section>
+
+
+</div><div id="manufacturing" class="page-section">
+
+
+<div class="page-hero wrap">
+  <div class="kicker">Seven Integrated Units</div>
+  <h1>Loom to <em>label.</em></h1>
+  <p class="lede">Every manufacturing step is performed under one roof, one management team and one quality standard &mdash; from raw yarn to a finished, shippable roll.</p>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <span><strong>120M</strong> metres woven per year</span>
+    <span><strong>50K</strong> metres/day digital printing</span>
+    <span><strong>250K</strong> metres/month lamination</span>
+    <span><strong>7</strong> integrated Karachi facilities</span>
+  </div>
+</div>
+
+<section id="mfg-units" class="dark-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>The seven units</h2>
+      <p>Each unit feeds the next without leaving the site, which is what keeps lead times short and quality consistent across large orders.</p>
+    </div>
+    <div class="facility-list">
+      <div class="facility-row">
+        <span class="fnum">01</span>
+        <div><h4>Weaving</h4><p>Yarn woven to spec into greige fabric, the unfinished base cloth every order starts from.</p></div>
+        <span class="fout">120M m / year</span>
+      </div>
+      <div class="facility-row">
+        <span class="fnum">02</span>
+        <div><h4>Knitting</h4><p>Knit constructions for applications outside the woven range.</p></div>
+        <span class="fout">Karachi campus</span>
+      </div>
+      <div class="facility-row">
+        <span class="fnum">03</span>
+        <div><h4>Wet Processing</h4><p>Bleaching, dyeing and washing lines that bring greige cloth to colour standard.</p></div>
+        <span class="fout">Batch-checked</span>
+      </div>
+      <div class="facility-row">
+        <span class="fnum">04</span>
+        <div><h4>Finishing</h4><p>Fabric finished, inspected and rolled to shipping spec.</p></div>
+        <span class="fout">In-line QC</span>
+      </div>
+      <div class="facility-row">
+        <span class="fnum">05</span>
+        <div><h4>Indigo Dyeing</h4><p>Rope and slasher indigo dyeing for the denim division.</p></div>
+        <span class="fout">Denim line</span>
+      </div>
+      <div class="facility-row">
+        <span class="fnum">06</span>
+        <div><h4>Lamination</h4><p>Bonded and laminated constructions for mattress and technical fabrics.</p></div>
+        <span class="fout">250K m / month</span>
+      </div>
+      <div class="facility-row">
+        <span class="fnum">07</span>
+        <div><h4>Stitching</h4><p>Cut-and-sew for finished bedding, cases and made-up textile goods.</p></div>
+        <span class="fout">Finished goods</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>From fibre to finished roll</h2>
+      <p>Four stages define most orders, each handed off internally rather than outsourced.</p>
+    </div>
+    <div class="process-track">
+      <div class="process-step">
+        <div class="num">01</div>
+        <h3>Weave</h3>
+        <p>Yarn woven to spec into greige fabric.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">02</div>
+        <h3>Dye</h3>
+        <p>Base cloth dyed to colour standard, checked against approved lab dips.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">03</div>
+        <h3>Print</h3>
+        <p>Digital or rotary printing applies pattern and colourway to client design files.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">04</div>
+        <h3>Finish</h3>
+        <p>Fabric finished, inspected and rolled, ready for cut-and-sew or retail packing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rust-band" style="padding:0;">
+  <div class="wrap">
+    <h2>Come See Us <span style="font-style:italic;">In Person.</span></h2>
+    <p>Factory visits by appointment. Karachi arrivals are handled from airport to campus. Request a full capacity audit deck or schedule your site visit today.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn" style="background:var(--paper); color:var(--rust-deep);">Arrange a Factory Visit</a>
+      <a href="#sustainability" class="btn btn-outline-light">Our ESG Story</a>
+    </div>
+  </div>
+</section>
+
+
+</div><div id="sustainability" class="page-section">
+
+
+<div class="page-hero wrap">
+  <div class="kicker">Our ESG Story</div>
+  <h1>Sustainability, built into the <em>process</em> &mdash; not added after it.</h1>
+  <p class="lede">Environmentally considered systems have run through Union Fabrics' manufacturing for more than two decades: from a dedicated organic cotton line to water- and chemical-conscious dyeing on the denim floor.</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Fibres we work with</h2>
+      <p>A sustainable-materials range sits alongside our conventional cotton lines, run through the same finishing equipment.</p>
+    </div>
+    <div class="grid-4">
+      <div class="cell"><h3>GOTS Organic Cotton</h3><p>Certified organic fibre with traceability from field to finished roll.</p></div>
+      <div class="cell"><h3>Hemp</h3><p>A lower-input natural fibre blended into select bedding and fabric lines.</p></div>
+      <div class="cell"><h3>Bamboo</h3><p>Soft-hand, fast-growing fibre used across select home-textile programs.</p></div>
+      <div class="cell"><h3>Tencel &amp; Recycled Polyester</h3><p>Regenerated and recycled fibres offered for around- and above-mattress applications.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section" id="commitments">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Where sustainability shows up on the floor</h2>
+      <p>Certification is treated as a production discipline, audited specifically across the organic cotton and denim lines.</p>
+    </div>
+    <div class="grid-3">
+      <div class="cell">
+        <div class="num">01</div>
+        <h3>Water &amp; dye recovery</h3>
+        <p>Recovery processes built into indigo dyeing to reduce water and chemical use on the denim floor.</p>
+      </div>
+      <div class="cell">
+        <div class="num">02</div>
+        <h3>Certified organic supply</h3>
+        <p>A GOTS-certified line keeps organic cotton traceable and segregated through every finishing stage.</p>
+      </div>
+      <div class="cell">
+        <div class="num">03</div>
+        <h3>Energy-conscious operations</h3>
+        <p>Efficiency upgrades across weaving, dyeing and finishing equipment reduce energy intensity per metre produced.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="section-head" style="border-bottom:none; padding-bottom:0; margin-bottom:32px;">
+      <h2>Standards we work to</h2>
+      <p>Certification is audited against our financial and operational records, not just claimed.</p>
+    </div>
+    <div class="cert-strip">
+      <div class="cert-chip">GOTS Certified Organic Cotton</div>
+      <div class="cert-chip">30+ Facility &amp; Product Certifications</div>
+      <div class="cert-chip">Home Textile Manufacturing Since 1992</div>
+      <div class="cert-chip">Export Production &mdash; United States &amp; Global</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Sourcing a lower-impact program?</h2>
+    <p>Tell us the fibre, certification and volume you need &mdash; our team will confirm what runs through our organic and sustainable-materials lines.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn btn-rust">Talk to our team</a>
+      <a href="#manufacturing" class="btn btn-outline-light">See manufacturing</a>
+    </div>
+  </div>
+</section>
+
+
+</div><div id="about" class="page-section">
+
+
+<div class="page-hero wrap">
+  <div class="kicker">Since 1992</div>
+  <h1>A family-owned mill, built for <em>scale.</em></h1>
+  <p class="lede">Union Fabrics is a vertically integrated textile manufacturer based in Karachi, Pakistan, and ranks among the country's top 100 home-textile exporters.</p>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <span><strong>1992</strong> founded</span>
+    <span><strong>3,000+</strong> employees</span>
+    <span><strong>7</strong> Karachi facilities</span>
+    <span><strong>30+</strong> certifications held</span>
+  </div>
+</div>
+
+<section id="ceo">
+  <div class="wrap">
+    <div class="quote-block">
+      <div class="quote-photo">
+        <span class="cap">Mohammad Asif Siddiq<br>President, Union Fabrics</span>
+      </div>
+      <div>
+        <div class="kicker" style="margin-bottom:16px;">Message from the President</div>
+        <p class="quote-text">Leading with purpose means staying close to one craft &mdash; home-textile cotton &mdash; and building the capacity to serve every stage of it ourselves.</p>
+        <div class="quote-attr"><strong>Mohammad Asif Siddiq</strong> &middot; President, Union Fabrics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section" id="vision-mission">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Our vision and mission</h2>
+      <p>Two statements that guide how the mill grows and who it grows for.</p>
+    </div>
+    <div class="two-col">
+      <div class="value-card" style="background:var(--black-soft); border-color:var(--line-dark);">
+        <div class="tag">Vision</div>
+        <p style="color:#CFC6B4;">To be the supplier the world's leading home-textile and apparel brands turn to first &mdash; for consistency, traceability and scale, from a single Karachi campus.</p>
+      </div>
+      <div class="value-card" style="background:var(--black-soft); border-color:var(--line-dark);">
+        <div class="tag">Mission</div>
+        <p style="color:#CFC6B4;">To keep every stage of production &mdash; weaving, dyeing, printing, finishing and stitching &mdash; under one roof, so quality, lead times and sustainability commitments stay in our control.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about-timeline">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>A record of building</h2>
+      <p>Every milestone below is a facility commissioned, a certificate earned, a market opened, or a partnership begun.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="year">1992</div>
+        <div><h3>Our beginning</h3><p>Union Fabrics founded in Karachi as a home-textile weaving operation.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="year">2000s</div>
+        <div><h3>Vertical integration</h3><p>Dyeing, printing and finishing brought in-house alongside weaving, reducing handoffs across the production line.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="year">2010s</div>
+        <div><h3>Recognised excellence in exports</h3><p>Ranked among Pakistan's top 100 home-textile exporters as export volume scaled to the US and EU.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="year">Today</div>
+        <div><h3>Built for scale</h3><p>Seven integrated Karachi facilities, 3,000+ employees, and over 30 certifications across bedding, fabrics, denim and Eastern wear.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Start the conversation.</h2>
+    <p>Sample request, trade pricing, factory visit or a general enquiry &mdash; our Karachi team responds to every message within one business day.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn btn-rust">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+</div><div id="contact" class="page-section">
+
+
+<section style="padding-top:36px;">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h1 style="font-size:clamp(2rem,3.6vw,2.7rem); margin-bottom:14px;">Start Your <span class="accent">Project.</span></h1>
+        <p style="color:var(--ink-soft); margin-bottom:32px;">Tell us what you're building, and our team will take it from there.</p>
+
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <div class="field"><label>First Name *</label><input type="text" required></div>
+            <div class="field"><label>Last Name *</label><input type="text" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Company *</label><input type="text" required></div>
+            <div class="field"><label>Country *</label><input type="text" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Business Email *</label><input type="email" placeholder="your.email@company.com" required></div>
+            <div class="field"><label>Phone</label><input type="tel" placeholder="WhatsApp / Phone Number"></div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Interested In</label>
+              <select>
+                <option>Home &amp; Utility Bedding</option>
+                <option>Fabrics</option>
+                <option>Denim Division</option>
+                <option>Eastern Wear for Women</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Expected Annual Volume</label>
+              <select>
+                <option>Select Volume Range</option>
+                <option>Under 50,000 m</option>
+                <option>50,000 &ndash; 250,000 m</option>
+                <option>250,000 &ndash; 1M m</option>
+                <option>1M+ m</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label>Message *</label>
+            <textarea placeholder="Tell us about your project, fabric requirements, targets, timeline, etc." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-rust">Request Information &rarr;</button>
+          <p class="form-note">Your information is secure and will never be shared. See our <a href="#">Privacy Policy</a>.</p>
+          <p class="form-note">Have a question first? Read our <a href="#">frequently asked questions</a>.</p>
+        </form>
+      </div>
+
+      <div>
+        <div class="contact-block">
+          <h3>Manufacturing HQ &middot; Karachi, Pakistan</h3>
+          <p>E-20/B, Central Avenue, S.I.T.E.<br>Karachi 75700, Pakistan</p>
+          <a href="tel:+922132567881">+92-21-32567881</a>
+          <a href="mailto:info@unionfabrics.com">info@unionfabrics.com</a>
+          <p>Monday &ndash; Saturday &middot; 09:00 &ndash; 18:00 PKT (UTC+5)</p>
+        </div>
+        <div class="divider"></div>
+        <div class="contact-block">
+          <h3>Sales Team</h3>
+          <a href="mailto:info@unionfabrics.com">info@unionfabrics.com</a>
+          <p>We respond within one business day.</p>
+        </div>
+        <div class="divider"></div>
+
+        <h3 style="font-size:1.3rem; font-family:'Fraunces',serif; font-weight:560; margin-bottom:20px;">Why Work With <span class="accent">Union Fabrics</span></h3>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-icon">&#8962;</div>
+            <div><h4>Vertical Integration</h4><p>From yarn to finished product: full control over quality, lead times and innovation.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">&#128197;</div>
+            <div><h4>Manufacturing Since 1992</h4><p>A family-owned mill with over three decades of experience crafting premium fabrics for the world's leading brands.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 20C20 20 12 12 6 12C2.5 12 0 14.5 0 18C0 21.5 2.5 24 6 24C12 24 20 20 20 20Z" fill="currentColor" opacity="0.9" transform="translate(3,0)"/>
+<path d="M20 20C20 20 28 28 34 28C37.5 28 40 25.5 40 22C40 18.5 37.5 16 34 16C28 16 20 20 20 20Z" fill="currentColor" opacity="0.9" transform="translate(-3,0)"/>
+<path d="M20 20C20 20 12 28 6 28C2.5 28 0 25.5 0 22C0 18.5 2.5 16 6 16C12 16 20 20 20 20Z" fill="currentColor" opacity="0.6" transform="translate(3,0)"/>
+<path d="M20 20C20 20 28 12 34 12C37.5 12 40 14.5 40 18C40 21.5 37.5 24 34 24C28 24 20 20 20 20Z" fill="currentColor" opacity="0.6" transform="translate(-3,0)"/>
+</svg>
+          <span class="brand-text">
+            <span class="name">Union Fabrics</span>
+          </span>
+        </a>
+        <p>Vertically integrated textile manufacturing: home bedding, laminated fabrics, sustainable denim and Eastern wear, supplied to brands across the US, EU and beyond.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="mailto:info@unionfabrics.com" aria-label="Email">@</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="#bedding">Home &amp; Utility Bedding</a></li>
+          <li><a href="#fabrics">Fabrics</a></li>
+          <li><a href="#denim">Denim Division</a></li>
+          <li><a href="#eastern">Eastern Wear for Women</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#manufacturing">Manufacturing</a></li>
+          <li><a href="#sustainability">Sustainability</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <p><a href="mailto:info@unionfabrics.com">info@unionfabrics.com</a></p>
+        <p><a href="tel:+922132567881">+92-21-32567881</a></p>
+        <p>E-20/B, Central Avenue<br>S.I.T.E. &middot; Karachi 75700</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="copyright">&copy; 2026 Union Fabrics (Pvt.) Ltd. All rights reserved.</span>
+      <div class="legal">
+        <a href="#">FAQ</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Blog</a>
+      </div>
+      <span class="tagline">One Supplier. Endless Possibilities.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
